@@ -2,11 +2,12 @@ import React, { useEffect, useState } from "react";
 import ColorContrastChecker from "color-contrast-checker";
 
 function HomeScreen() {
-  const ccc = new ColorContrastChecker();
   const [foreground, setForeground] = useState("#FF0000");
   const [background, setBackground] = useState("#00FF00");
   const [AA, setAA] = useState(false);
   const [AAA, setAAA] = useState(false);
+
+  const ccc = new ColorContrastChecker();
 
   useEffect(() => {
     calculateRatio(foreground, background);
